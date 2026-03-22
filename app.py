@@ -1,6 +1,17 @@
 import streamlit as st
 from audiorecorder import audiorecorder
 
+
+st.markdown("""
+    <style>
+        .stButton > button {
+            background-color: #D30000;
+            color: white;
+            border: none;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 st.title("New Meeting")
 st.caption("Fill in the details and let AI handle the rest.")
 
@@ -38,10 +49,7 @@ with col3:
     
 
 with col4:
-        
-    audio = audiorecorder("Start Recording", "Stop Recording")
-    if len(audio) > 0:
-        st.audio(audio.export().read())
+    recorded_audio = st.audio_input("Record Audio")
     
     
 generate = st.button("Generate MoM", use_container_width=True)
