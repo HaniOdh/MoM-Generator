@@ -1,1 +1,93 @@
-**/venv/
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.*
+!.env.example
+
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# ========================
+# Data & Uploads
+# ========================
+uploads/
+audio_files/
+*.mp3
+*.wav
+*.m4a
+*.ogg
+*.flac
+
+# Exported files
+exports/
+*.pdf
+*.docx
+
+# ========================
+# Database
+# ========================
+*.db
+*.sqlite3
+*.sqlite
+
+# ========================
+# ML Models & Cache
+# ========================
+models/
+*.pt
+*.bin
+*.onnx
+*.gguf
+whisper_cache/
+~/.cache/whisper/
+
+# ========================
+# Logs
+# ========================
+logs/
+*.log
+
+# ========================
+# Testing
+# ========================
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# ========================
+# Streamlit
+# ========================
+.streamlit/secrets.toml
+
+# ========================
+# Docker
+# ========================
+.dockerignore
+
+# ========================
+# IDE / OS
+# ========================
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
